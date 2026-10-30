@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const countryInput = document.querySelector('#country-input');
 
     async function getCountry() {
-        const response = await fetch(`https://countrydataapi.com{countryInput.value}?apikey=60F36E19-2727-4363-9AF0-65E47CA28F4E`)
+        const response = await fetch(`https://countries.dev/alpha/${encodeURIComponent(code)}`)
         const data = await response.json();
         console.log(data);
         const flagUrl = data[0].flag;
